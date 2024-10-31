@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jogo mata mosquito</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/mosca.png" type="image/x-icon">
+    <script src="js/jogo.js"></script>
+  </head>
+  <body onresize="ajustaTamanhoJanela()">
+    <div class="painel">
+      <div class="vidas">
+        <img id="v1" src="img/coracao_cheio.png" />
+        <img id="v2" src="img/coracao_cheio.png" />
+        <img id="v3" src="img/coracao_cheio.png" />
+      </div>
+
+      <div class="cronometro">
+        Tempo restante: <span id="cronometro"></span>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("cronometro").innerHTML = tempo;
+
+      var criaMosca = setInterval(function () {
+        posicaoRandom();
+      }, 2000);
+    </script>
+  </body>
+</html>
